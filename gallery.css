@@ -1,0 +1,167 @@
+.wrapper {
+  background: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/089d21ad-7782-4104-89c2-a65435feaa61/d99amhi-7bdd97ff-1540-4882-9f06-4d845e750b1e.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwic3ViIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsImF1ZCI6WyJ1cm46c2VydmljZTpmaWxlLmRvd25sb2FkIl0sIm9iaiI6W1t7InBhdGgiOiIvZi8wODlkMjFhZC03NzgyLTQxMDQtODljMi1hNjU0MzVmZWFhNjEvZDk5YW1oaS03YmRkOTdmZi0xNTQwLTQ4ODItOWYwNi00ZDg0NWU3NTBiMWUuZ2lmIn1dXX0.ZtCIpIWU9q6cfIrJgDM8q437mWnfwGGfsAFvW25wpGU");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width:100%;
+  height: 100%;
+}
+
+.center {
+  display:flex;
+  justify-content: center;
+}
+
+#index-gallery {
+  width:60%;
+  padding-top: 200px;
+  display: grid;
+  grid-template-rows: auto;
+  grid-gap: 10px;
+  grid-template-areas:
+  'img1 img2 img3 img4'
+  'img5 img6 img3 img7';
+}
+
+#index-gallery .gallery-img {
+  width: 100%;
+  height: 200px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+}
+
+/* Images */
+#index-gallery .wrapper {
+  grid-area: yt;
+  margin: 0 auto;
+  padding-top: 5%;
+}
+
+.youtube iframe {
+  border: 2px dashed rgb(74, 233, 140);
+}
+
+#index-gallery .img1 {
+  grid-area: img1;
+  background-image: url("pic_1.gif");
+  border: 2px dashed salmon;
+}
+#index-gallery .img2 {
+  grid-area: img2;
+  background-image: url("pic_2.gif");
+  border: 2px dashed rgb(198, 250, 114);
+}
+#index-gallery .img3 {
+  grid-area: img3;
+  background-image: url("pic_3.gif");
+  height: 410px;
+  border: 2px dashed rgb(79, 44, 177);
+}
+#index-gallery .img4 {
+  grid-area: img4;
+  background-image: url("pic_4.gif");
+  border: 2px dashed rgb(114, 230, 250);
+}
+#index-gallery .img5 {
+  grid-area: img5;
+  background-image: url("pic_5.gif");
+  border: 2px dashed rgb(5, 3, 3);
+}
+#index-gallery .img6 {
+  grid-area: img6;
+  background-image: url("pic_6.gif");
+  border: 2px dashed rgb(120, 13, 207);
+}
+#index-gallery .img7 {
+  grid-area: img7;
+  background-image: url("pic_7.gif");
+  border: 2px dashed salmon;
+}
+
+/* Gallery image titles */
+.gallery-img div {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery-img a {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.gallery-img div:hover {
+  opacity: 0.8;
+  transition: all ease-in-out 0.3s;
+}
+
+/* Popup window when clicked */
+
+.img-window {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.img-window img {
+  max-height: 80vh;
+  max-width: 80vw;
+}
+
+/* Next image styling*/
+
+.img-btn-next {
+  display: block;
+  padding: 6px 10px;
+  border-radius: 4px;
+  background-color: #111111;
+  position: fixed;
+  top: 48vh;
+  z-index: 5000;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.img-btn-next:hover {
+  opacity: 0.8;
+}
+
+.img-btn-prev {
+  display: block;
+  padding: 6px 10px;
+  border-radius: 4px;
+  background-color: #111111;
+  position: fixed;
+  top: 48vh;
+  z-index: 5000;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.img-btn-prev:hover {
+  opacity: 0.8;
+}
+
+.something {
+  width:100px;
+}
